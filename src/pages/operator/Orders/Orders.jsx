@@ -71,16 +71,6 @@ export const Orders = () => {
 
     };
 
-    const handleRejectOrder = async (order, onClose) => {
-        try {// Llama a la API para rechazar la orden
-            console.log("Rechazando orden:", order.id);
-            //cerrar OrderTable
-            onClose();
-        } catch (error) {
-            console.error("Error al rechazar la orden:", error);
-            showNotification("Error al rechazar la orden", "error");
-        }
-    };
 
     const actions = [
         { label: "Enviar", color: "success", order_process: ORDER_STATUS.ENVIADO, onClick: handleProcessOrder },

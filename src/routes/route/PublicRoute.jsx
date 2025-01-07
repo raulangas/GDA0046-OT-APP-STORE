@@ -18,7 +18,7 @@ export const PublicRoute = ({ children }) => {
     if (user) {
         switch (user.rol) {
             case ROL.OPERADOR:
-                return <Navigate to="/operator" replace />
+                return <Navigate to="/operator/orders" replace />
             case ROL.CLIENTE:
                 return <Navigate to="/customer" replace />
             default:

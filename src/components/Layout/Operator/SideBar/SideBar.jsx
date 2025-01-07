@@ -12,7 +12,7 @@ import { MENU_ITEMS } from './config';
 
 const SideBar = ({ drawerWidth = 240 }) => {
   const location = useLocation();
-  
+
   const isActiveRoute = (path) => {
     return location.pathname === path;
   };
@@ -38,7 +38,7 @@ const SideBar = ({ drawerWidth = 240 }) => {
             <ListItemIcon>
               <Icon color={isActiveRoute(item.path) ? 'primary' : 'inherit'} />
             </ListItemIcon>
-            <ListItemText 
+            <ListItemText
               primary={item.name}
               color={isActiveRoute(item.path) ? 'primary' : 'inherit'}
             />

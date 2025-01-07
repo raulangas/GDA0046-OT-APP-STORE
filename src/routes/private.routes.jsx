@@ -80,7 +80,8 @@ export const privateRoutes = [
         children: [
             {
                 index: true,
-                element: <HomeOperator />
+                // element: <HomeOperator />
+                element: <OrdersOperator />
             },
             {
                 path: 'orders',

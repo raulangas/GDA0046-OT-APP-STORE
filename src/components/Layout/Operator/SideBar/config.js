@@ -8,12 +8,12 @@ import ListAltIcon from '@mui/icons-material/ListAlt';
 
 export const MENU_ITEMS = {
     OPERATOR: [
-        {
-            id: 'dashboard',
-            name: 'Dashboard',
-            icon: DashboardIcon,
-            path: '/operator',
-        },
+        // {
+        //     id: 'dashboard',
+        //     name: 'Dashboard',
+        //     icon: DashboardIcon,
+        //     path: '/operator',
+        // },
         {
             id: 'orders',
             name: 'Ordenes',

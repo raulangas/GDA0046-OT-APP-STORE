@@ -6,10 +6,12 @@ import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { useCart } from '../../../hooks/useCart';
 import CartDrawer from '../../Cart/CartDrawer';
+import { useAuth } from '../../../hooks/useAuth.js';
 
 const CustomerLayout = () => {
     const [isCartOpen, setIsCartOpen] = useState(false);
     const { total, cantidad } = useCart();
+    const { user } = useAuth();
 
     const toggleCart = () => {
         setIsCartOpen(!isCartOpen);
@@ -24,7 +26,7 @@ const CustomerLayout = () => {
 
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                         <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <Typography variant="h6" component="div">
+                            <Typography variant="h5" component="div">
                                 {APP_NAME}
                             </Typography>
                         </Link>
@@ -34,7 +36,7 @@ const CustomerLayout = () => {
                             <IconButton color="inherit">
                                 <PersonIcon />
                                 <Typography variant="body2" sx={{ ml: 1 }}>
-                                    Mi Cuenta
+                                    {user?.email}
                                 </Typography>
                             </IconButton>
 

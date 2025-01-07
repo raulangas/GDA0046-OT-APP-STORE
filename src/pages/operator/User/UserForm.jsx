@@ -49,7 +49,7 @@ const UserForm = ({ open, user, onClose }) => {
     const onSubmit = async (formData) => {
         try {
             formData.activo = formData.activo ? 1 : 0;
-            
+
             if (user) {
                 console.log("formData", formData);
                 await updateUser(user.id, formData);
@@ -69,6 +69,8 @@ const UserForm = ({ open, user, onClose }) => {
             );
         }
     };
+
+
 
     return (
         <Dialog open={open} onClose={() => onClose(false)} fullWidth maxWidth="sm">
@@ -90,6 +92,11 @@ const UserForm = ({ open, user, onClose }) => {
                             ]}
                             disabled={!!user}
                             required={!user}
+                        />
+
+                        <WatchedClientSelect
+                            customers={customers}
+                            isLoading={loading}
                         />
 
                         <TextFieldElement
@@ -163,10 +170,7 @@ const UserForm = ({ open, user, onClose }) => {
                             }}
                         />
 
-                        <WatchedClientSelect
-                            customers={customers}
-                            isLoading={loading}
-                        />
+
 
                         <SwitchElement
                             name="activo"

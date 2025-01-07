@@ -1,5 +1,8 @@
-Desafio WEB 360 - Proyecto APP-REACT para tienda en línea
+
+# Desafio WEB 360 - Proyecto APP-REACT
+
 Clave de aspirante GDA0046-OT Raúl Orozco
+
 
 # Mi Tiendita Online
 
